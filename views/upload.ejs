@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand4Consumers</title>
+    <link rel="icon" href="/logo.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/upload.css" />
+  </head>
+  <body>
+    <div class="feed">
+       
+      <nav>
+        <span class="left">
+          <img src="/logo.png" alt="logo" />
+          <a href="#" class="x">How it Works?</a>
+          <a href="#">Product</a>
+          <a href="#">About Us</a>
+        </span>
+        <span class="right">
+          <a href="#">Login</a>
+          <button type="button">Sign Up</button>
+        </span>
+      </nav>
+    </div>
+    <div class="feed-image">
+      <div>
+        <img src="/uploadR.png" class="enlarged-image" style="height: 20rem" />
+      </div>
+      <div class="formA">
+        <select class="form-select" id="productCategory" aria-label="Default select example">
+          <option selected>Select product category</option>
+          <option value="1">Televisions</option>
+          <option value="2">Mobile Phones</option>
+          <option value="3">Fridge</option>
+          <option value="4">AC</option>
+          <option value="5">Tablets</option>
+          <option value="6">Washing Machine</option>
+        </select>
+        <div class="row">
+            <div class="col-12 offset-2">
+              <h3 class="mt-2">Upload a new Review</h3>
+              <form
+                method="get"
+                action="/customer"
+                class="needs-validation"
+                novalidate
+                enctype="multipart/form-data"
+              >
+                <div class="mb-3">
+                  <label for="title" class="form-label">Model</label>
+                  <input
+                    name="model-name"
+                    placeholder="Enter the Model/Name"
+                    type="text"
+                    class="form-control"
+                    id="title"
+                    required
+                  />
+                </div>
+        
+                <div class="mb-3">
+                  <label for="description" class="form-label">Why Do you Like/ Dislike it</label>
+                  <textarea
+                    name="listing[description]"
+                    placeholder="enter description"
+                    class="form-control"
+                    id="description"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label">Upload Proof (eg. Order Id)</label>
+                  <input
+                    name="orderid[image]"
+                    type="file"
+                    class="form-control"
+                    id="image"
+                    required
+                  />
+                </div>
+                
+                
+                <div class="mb-3">
+                  <label for="location" class="form-label">Location</label>
+                  <input
+                    name="listing[location]"
+                    placeholder="enter location"
+                    type="text"
+                    id="location"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">Location should be valid</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label"id="uploadBtn">Upload Review</label>
+                    <input
+                      name="orderid[image]"
+                      type="file"
+                      class="form-control"
+                      id="video"
+                      required
+                    />
+                  </div>
+                <button class="btn btn-dark add-btn">Upload</button>
+        
+                <br /><br />
+              </form>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>
